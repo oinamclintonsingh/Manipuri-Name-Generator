@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipuri name generate | PoratlEra</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,700|Open+Sans:400,400i,700,700i&display=swap">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate a Manipuri Name <br> Power by PortalEra</h1>
+        <div class="gender-div">
+            <label>
+                <input type="radio" name="gender" value="Male" checked>
+                Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+        </div>
+        <div class="starting-letter-div">
+            <label>
+                <input type="checkbox" id="provideStartingLetter" onclick="toggleLetterInputs()">
+                Provide starting letter
+            </label>
+        </div>
+        <div>
+            <div class="first-name-div">
+                <label>
+                    <input type="radio" name="nameLength" value="OneWord" checked
+                        onclick="toggleSecondLetterInput(false)">
+                    One Word
+                </label>
+                <input type="text" id="letterInput" placeholder="Enter the starting letter" style="display: none;">
+            </div>
+            <div class="second-name-div">
+                <label>
+                    <input type="radio" name="nameLength" value="MoreThanOneWord"
+                        onclick="toggleSecondLetterInput(true)">
+                    More Than One Word
+                </label>
+                <input type="text" id="secondLetterInput" placeholder="Enter the starting letter for the second word"
+                    style="display: none;">
+            </div>
+        </div>
+        <button onclick="generateName()" >
+            <span class="button-inner" >Generate Name</span>
+        </button>
+        <div id="output"></div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
