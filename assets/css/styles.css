@@ -37,8 +37,8 @@ h6 {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 600px;
-    max-width: 800px;
+    width: 40%;
+    max-width: 95%;
     background-size: cover;
     /* Ensure the image covers the entire background */
     background-blend-mode: overlay;
@@ -49,14 +49,96 @@ h1 {
     margin-bottom: 20px;
 }
 
-.gender-div, .starting-letter-div, .first-name-div, .second-name-div {
+.gender-div, .starting-letter-div {
     display: flex;
     align-items: flex-start;
-    padding: 1rem 3rem;
+    padding: 0.3rem 3rem;
+}
+
+.first-name-div, .second-name-div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 3rem;
+}
+
+.male, .female, .first-name-div label, .second-name-div label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.second-name-div {
+    margin-top: -5px;
+}
+
+/* Radio */
+.input {
+    -webkit-appearance: none;
+   /* remove default */
+    display: block;
+    margin: 10px 10px 10px 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    vertical-align: middle;
+    box-shadow: hsla(0,0%,100%,.15) 0 1px 1px, inset hsla(0,0%,0%,.5) 0 0 0 1px;
+    background-color: hsla(0,0%,0%,.2);
+    background-image: -webkit-radial-gradient( hsla(200,100%,90%,1) 0%, hsla(200,100%,70%,1) 15%, hsla(200,100%,60%,.3) 28%, hsla(200,100%,30%,0) 70% );
+    background-repeat: no-repeat;
+    -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+      -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+    outline: none;
+  }
+  
+  .input:checked {
+    -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+      -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  .input:active {
+    -webkit-transform: scale(1.5);
+    -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
+  }
+  
+  /* The up/down direction logic */
+  
+  .input:checked {
+    background-position: 0 0;
+  }
+
+  .input,
+  .input:active {
+    background-position: 0 24px;
+  }
+  
+  .input:checked ~ .input,
+  .input:checked ~ .input:active {
+    background-position: 0 -24px;
+  }
+
+  .input.reverse:checked {
+    background-position: 0 0;
+  }
+
+  .input.reverse {
+    background-position: 0 -24px;
+  }
+    
+  .input.reverse:checked ~ .input,
+  .input.reverse:checked ~ .input:active {
+    background-position: 0 24px;
+  }
+
+  
+/* ******************************************************** */
+#letterInput, #secondLetterInput {
+    margin-left: 35px;
 }
 
 input[type="text"] {
-    width: 50%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -66,6 +148,120 @@ input[type="text"] {
 label {
     margin-right: 10px;
 }
+
+/* checkbox */
+.starting-letter-div {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    align-items: center;
+  }
+  
+  .starting-letter-div input[type="checkbox"] {
+    display: none;
+  }
+  
+  .starting-letter-div label {
+    --size: 25px;
+    --shadow: calc(var(--size) * .07) calc(var(--size) * .1);
+    position: relative;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    margin: 0 10px 0 0;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    border-radius: 50%;
+    box-shadow: 0 var(--shadow) #ffbeb8;
+    cursor: pointer;
+    transition: 0.2s ease transform, 0.2s ease background-color,
+        0.2s ease box-shadow;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .starting-letter-div label:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: calc(var(--size) * .7);
+    height: calc(var(--size) * .7);
+    margin: 0 auto;
+    background-color: #fff;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    box-shadow: inset 0 var(--shadow) #ffbeb8;
+    transition: 0.2s ease width, 0.2s ease height;
+  }
+  
+  .starting-letter-div label:hover:before {
+    width: calc(var(--size) * .55);
+    height: calc(var(--size) * .55);
+    box-shadow: inset 0 var(--shadow) #ff9d96;
+  }
+  
+  .starting-letter-div label:active {
+    transform: scale(0.9);
+  }
+  
+  .starting-letter-div .tick_mark {
+    position: absolute;
+    top: -1px;
+    right: 0;
+    left: calc(var(--size) * -.05);
+    width: calc(var(--size) * .6);
+    height: calc(var(--size) * .6);
+    margin: 0 auto;
+    margin-left: calc(var(--size) * .14);
+    transform: rotateZ(-40deg);
+  }
+  
+  .starting-letter-div .tick_mark:before,
+    .starting-letter-div .tick_mark:after {
+    content: "";
+    position: absolute;
+    background-color: #080808;
+    border-radius: 2px;
+    opacity: 0;
+    transition: 0.2s ease transform, 0.2s ease opacity;
+  }
+  
+  .starting-letter-div .tick_mark:before {
+    left: 0;
+    bottom: 0;
+    width: calc(var(--size) * .1);
+    height: calc(var(--size) * .3);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
+    transform: translateY(calc(var(--size) * -.68));
+  }
+  
+  .starting-letter-div .tick_mark:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: calc(var(--size) * .1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
+    transform: translateX(calc(var(--size) * .78));
+  }
+  
+  .starting-letter-div input[type="checkbox"]:checked + label {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .starting-letter-divinput[type="checkbox"]:checked + label:before {
+    width: 0;
+    height: 0;
+  }
+  
+  .starting-letter-div input[type="checkbox"]:checked + label .tick_mark:before,
+    .starting-letter-div input[type="checkbox"]:checked + label .tick_mark:after {
+    transform: translate(0);
+    opacity: 1;
+  }
+/* ******************************************* */
 
 /* button */
 @property --progress {
@@ -200,8 +396,8 @@ button::before {
     font-weight: bolder;
     margin-top: 20px;
     font-size: 1.7em;
-    color: #492540;
-    text-shadow: 0 0 10px rgba(240, 236, 236, 0.863)
+    color: #05DFD7;
+    text-shadow: 0 0 10px rgba(5, 5, 5, 0.863)
 }
 
 
@@ -212,7 +408,15 @@ button::before {
 
     .container {
         width: 95%;
-        padding: 1%;
+        padding: 1px;
+    }
+
+    .gender-div, .starting-letter-div, .first-name-div, .second-name-div {
+        padding: 0 0.9rem;
+    }
+
+    .second-name-div {
+        margin-top: -10px;
     }
 
 
