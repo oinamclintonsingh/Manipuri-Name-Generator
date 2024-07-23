@@ -25,10 +25,10 @@ Welcome to the Manipuri Name Generator! This website generates Manipuri names in
 - Click the "Generate Name" button to see the result in Meitei Mayek script.
 
 ### Desktop View
-![image text](https://github.com/oinamclintonsingh/manipuri-name-generator/blob/46ceac07b61f46ab50c6a473aa5fd66d59612b8a/assets/images/Manipuri%20name%20generate%20-%20PoratlEra.png)
+![image text](https://github.com/oinamclintonsingh/manipuri-name-generator/blob/46ceac07b61f46ab50c6a473aa5fd66d59612b8a/assets/images/Manipuri%20name%20generate%20-%20PoratlEra.png) ![Image text](https://github.com/oinamclintonsingh/manipuri-name-generator/blob/46ceac07b61f46ab50c6a473aa5fd66d59612b8a/assets/images/Manipuri%20name%20generate%20-%20PoratlEra_03.png) 
 
 ### Mobile View
-![Image text](https://github.com/oinamclintonsingh/manipuri-name-generator/blob/46ceac07b61f46ab50c6a473aa5fd66d59612b8a/assets/images/Manipuri%20name%20generate%20-%20PoratlEra_02.png)
+![Image text](https://github.com/oinamclintonsingh/manipuri-name-generator/blob/46ceac07b61f46ab50c6a473aa5fd66d59612b8a/assets/images/Manipuri%20name%20generate%20-%20PoratlEra_02.png) ![Image text](https://github.com/oinamclintonsingh/manipuri-name-generator/blob/46ceac07b61f46ab50c6a473aa5fd66d59612b8a/assets/images/Manipuri%20name%20generate%20-%20PoratlEra_04.png)
 
 ## Contributing
 
