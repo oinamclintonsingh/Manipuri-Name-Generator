@@ -37,7 +37,7 @@ We welcome contributions! Please read our Contributing Guidelines for more detai
 
 ## Acknowledgements
 
-- Special thanks to the cultural experts and linguists who provided valuable insights and resources for the Meitei Mayek script.
+- Special thanks to the cultural experts and linguists who provided valuable insights and resources for the Meitei Mayek script (Haorongbam Preetika Devi, Oinam Bikash Meitei, Keisham Rabichandra Singh).
 - Inspired by the rich cultural heritage of Manipur.
 
 ## Contact
